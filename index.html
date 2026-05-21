@@ -1235,6 +1235,214 @@ text-shadow:
   0 0 6px rgba(255, 200, 0, 0.25) !important;
   }
 }
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HEADER HEIGHT + NAMALU IMAGE — ALL DEVICES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.site-header {
+  min-height: clamp(300px, 38vw, 470px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.site-header .toran svg {
+  height: clamp(44px, 6vw, 70px) !important;
+}
+
+.header-inner {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(34px, 7vw, 72px) clamp(14px, 4vw, 32px) clamp(28px, 6vw, 58px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.namalu-img {
+  display: block;
+  width: auto;
+  height: clamp(78px, 15vw, 135px);
+  max-width: min(260px, 72vw);
+  object-fit: contain;
+  margin: 0 auto clamp(12px, 2.5vw, 20px);
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.28));
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+  .site-header {
+    min-height: clamp(330px, 72vw, 430px);
+  }
+
+  .header-inner {
+    padding-top: clamp(42px, 10vw, 64px);
+    padding-bottom: clamp(34px, 8vw, 54px);
+  }
+
+  .namalu-img {
+    height: clamp(82px, 22vw, 120px) !important;
+    max-width: min(240px, 76vw);
+    margin-bottom: 14px;
+  }
+}
+
+/* Small mobile */
+@media only screen and (max-width: 420px) {
+  .site-header {
+    min-height: 360px;
+  }
+
+  .header-inner {
+    padding-top: 46px;
+    padding-bottom: 38px;
+  }
+
+  .namalu-img {
+    height: 92px !important;
+    max-width: 210px;
+  }
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SMALLER DETAILS / GUIDELINES CARDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+.quick-tiles-section {
+  margin-bottom: clamp(16px, 3.5vw, 28px) !important;
+}
+
+.quick-tiles-grid {
+  max-width: 560px !important;
+  grid-template-columns: repeat(2, minmax(150px, 1fr)) !important;
+  gap: clamp(10px, 2vw, 16px) !important;
+}
+
+.quick-tile-card {
+  padding: clamp(8px, 1.8vw, 12px) !important;
+  border-radius: 12px !important;
+  min-height: clamp(128px, 18vw, 170px) !important;
+
+  box-shadow:
+    0 0 18px rgba(90, 20, 5, 0.12),
+    0 0 34px rgba(90, 20, 5, 0.05) !important;
+}
+
+.quick-tile-card .gline {
+  width: 44px !important;
+}
+
+.quick-tile-card .gline:first-child {
+  margin-bottom: 8px !important;
+}
+
+.quick-tile-card .gline:last-child {
+  margin-top: 8px !important;
+}
+
+.quick-tile-icon {
+  width: clamp(34px, 6vw, 48px) !important;
+  margin-bottom: 6px !important;
+}
+
+.quick-tile-card h3,
+.quick-tile-card h3 span,
+.quick-tile-card h3 .te-font {
+  font-size: clamp(13px, 2.2vw, 16px) !important;
+  line-height: 1.25 !important;
+  margin-bottom: 4px !important;
+}
+
+.quick-tile-card > span,
+.quick-tile-card > span span {
+  font-size: clamp(10px, 1.8vw, 12px) !important;
+  line-height: 1.2 !important;
+}
+
+/* Telugu override only inside these small cards */
+body[data-lang="te"] .quick-tile-card .lte,
+body[data-lang="te"] .quick-tile-card .lte.te-font,
+body[data-lang="te"] .quick-tile-card .te-font {
+  font-size: clamp(14px, 2.4vw, 17px) !important;
+  line-height: 1.3 !important;
+}
+
+/* Hover should also be smaller */
+.quick-tile-card:hover {
+  transform: translateY(-3px) scale(1.015) !important;
+  box-shadow:
+    0 0 26px rgba(90, 20, 5, 0.16),
+    0 0 46px rgba(90, 20, 5, 0.07) !important;
+}
+
+/* Tablet and mobile */
+@media only screen and (max-width: 768px) {
+  .quick-tiles-grid {
+    max-width: 360px !important;
+    grid-template-columns: repeat(2, minmax(130px, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .quick-tile-card {
+    padding: 10px 8px !important;
+    min-height: 132px !important;
+    border-radius: 12px !important;
+    transform: none !important;
+  }
+
+  .quick-tile-icon {
+    width: 38px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .quick-tile-card h3,
+  .quick-tile-card h3 span,
+  .quick-tile-card h3 .te-font {
+    font-size: 15px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 4px !important;
+  }
+
+  body[data-lang="te"] .quick-tile-card .lte,
+  body[data-lang="te"] .quick-tile-card .lte.te-font,
+  body[data-lang="te"] .quick-tile-card .te-font {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+  }
+}
+
+/* Very small mobile */
+@media only screen and (max-width: 420px) {
+  .quick-tiles-grid {
+    max-width: 310px !important;
+    grid-template-columns: repeat(2, minmax(120px, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  .quick-tile-card {
+    padding: 9px 7px !important;
+    min-height: 118px !important;
+  }
+
+  .quick-tile-icon {
+    width: 34px !important;
+  }
+
+  .quick-tile-card h3,
+  .quick-tile-card h3 span,
+  .quick-tile-card h3 .te-font {
+    font-size: 14px !important;
+  }
+
+  body[data-lang="te"] .quick-tile-card .lte,
+  body[data-lang="te"] .quick-tile-card .lte.te-font,
+  body[data-lang="te"] .quick-tile-card .te-font {
+    font-size: 15px !important;
+  }
+}
   </style>
 </head>
 
@@ -1436,7 +1644,7 @@ text-shadow:
   <!-- ══════════════════════════════════════
        DARK HEADER
   ══════════════════════════════════════ -->
-  <header class="dark-band">
+ <header class="dark-band site-header">
 
     <!-- Mango leaf toran hanging from header -->
     <div class="toran">
@@ -1478,14 +1686,15 @@ text-shadow:
     </div>
 
     <!-- Header main content -->
-    <div style="padding:clamp(16px,4vw,26px) clamp(12px,4vw,28px);max-width:900px;margin:0 auto">
+    <div class="header-inner">
 
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
 
-
         <!-- Center -->
         <div style="flex:1;text-align:center">
-          <span class="om" style="font-size:clamp(38px,10vw,60px);line-height:1;margin-bottom:8px">ॐ</span>
+          <img src="assets/namalu.png"
+            alt="Namalu"
+            class="namalu-img" />
           <h1 class="te-font telugu-heading"
             style="color:#FFD700;font-size:clamp(20px,5vw,34px);line-height:1.6;text-shadow:0 0 28px rgba(255,200,0,0.5), 0 0 16px rgba(255,180,0,0.3)">
             అఖండ దివ్య వైభవ జ్యోతి
@@ -1496,7 +1705,6 @@ text-shadow:
             <span class="lte te-font">ఘృతయజ్ఞ, నామయజ్ఞ సహిత సప్త ప్రదక్షిణం</span>
           </p>
         </div>
-
 
       </div>
 
@@ -1526,7 +1734,6 @@ text-shadow:
     <!-- Header bottom shimmer -->
     <div class="gline"></div>
   </header>
-
 
   <!-- ══════════════════════════════════════
        MAIN CONTENT
@@ -1692,47 +1899,191 @@ text-shadow:
           </svg>
         </div>
       </section>
+<!-- ── TEMPLE RULES & GUIDELINES TILES ── -->
+<section class="quick-tiles-section" style="margin-bottom:clamp(24px,5vw,40px)">
+  <div class="quick-tiles-grid"
+    style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(14px,4vw,24px);max-width:820px;margin:0 auto">
+    <!-- RULES TILE -->
+    <a href="about.html" style="display:block">
+      <div class="rc quick-tile-card" style="padding:clamp(12px,3vw,18px);text-align:center;height:100%">
 
-          <!-- ── TEMPLE RULES CARD ── -->
-      <section style="margin-bottom:clamp(24px,5vw,40px)">
-        <a href="rules.html" style="display:block;max-width:380px;margin:0 auto">
-          <div class="rc" style="padding:clamp(18px,5vw,30px);text-align:center">
+        <div class="gline" style="width:64px;margin:0 auto 16px;border-radius:2px"></div>
 
-            <div class="gline" style="width:64px;margin:0 auto 16px;border-radius:2px"></div>
+<!-- Hindu Temple Gopuram [temple tower] icon -->
+<svg class="quick-tile-icon" viewBox="0 0 120 150"
+  style="width:clamp(48px,10vw,68px);height:auto;display:block;margin:0 auto 12px;color:#4A1205">
+  
+  <!-- Base platform -->
+  <path d="M14 138 H106" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+  <path d="M20 130 H100" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none" />
 
-            <!-- Temple icon -->
-            <svg viewBox="0 0 100 100"
-              style="width:clamp(36px,8vw,50px);height:auto;display:block;margin:0 auto 12px;color:#4A1205">
-              <path d="M50,5 L65,26 L86,26 L86,95 L14,95 L14,26 L35,26 Z" fill="none" stroke="currentColor"
-                stroke-width="3" />
-              <path d="M50,8 L62,24 L38,24 Z" fill="currentColor" />
-              <rect x="24" y="36" width="14" height="19" rx="7" fill="none" stroke="currentColor" stroke-width="2" />
-              <rect x="62" y="36" width="14" height="19" rx="7" fill="none" stroke="currentColor" stroke-width="2" />
-              <path d="M40,95 L40,64 Q50,54 60,64 L60,95" fill="none" stroke="currentColor" stroke-width="2.5" />
-              <circle cx="50" cy="46" r="8" fill="none" stroke="currentColor" stroke-width="2" />
-              <line x1="14" y1="26" x2="86" y2="26" stroke="currentColor" stroke-width="2.5" />
-              <path d="M7,29 L93,29 L88,22 L12,22 Z" fill="currentColor" opacity="0.14" />
-            </svg>
+  <!-- Bottom mandapam -->
+  <rect x="24" y="96" width="72" height="34" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M30 130 V106 Q36 98 42 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+  <path d="M48 130 V106 Q54 98 60 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+  <path d="M66 130 V106 Q72 98 78 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+  <path d="M84 130 V106 Q90 98 96 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
 
-            <h3 class="cin-font" style="color:#3D0E00;font-weight:600;font-size:clamp(14px,3vw,18px);margin-bottom:8px">
-              <span class="len">Temple Rules &amp; Guidelines</span>
-              <span class="lte te-font telugu-heading">దేవాలయ నియమాలు &amp; మార్గదర్శకాలు</span>
-            </h3>
-            <p class="cor-font"
-              style="color:#5C3000;font-size:clamp(13px,2.2vw,16px);margin-bottom:14px;line-height:1.6">
-              <span class="len">View the sacred guidelines for devotees attending the festival</span>
-              <span class="lte te-font">ఉత్సవంలో పాల్గొనే భక్తులకు పవిత్ర మార్గదర్శకాలు</span>
-            </p>
-            <span class="cin-font"
-              style="color:#4A1205;font-size:clamp(11px,2vw,13px);display:inline-flex;align-items:center;gap:6px">
-              <span class="len">View Guidelines →</span>
-              <span class="lte te-font">మార్గదర్శకాలు చూడండి →</span>
-            </span>
+  <!-- Decorative row above base -->
+  <path d="M20 92 H100" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+  <path d="M25 92 Q30 82 35 92 Q40 82 45 92 Q50 82 55 92 Q60 82 65 92 Q70 82 75 92 Q80 82 85 92 Q90 82 95 92"
+    fill="none" stroke="currentColor" stroke-width="2.4" />
 
-            <div class="gline" style="width:64px;margin:16px auto 0;border-radius:2px"></div>
-          </div>
-        </a>
-      </section>
+  <!-- Gopuram tiers -->
+  <path d="M28 86 H92 L88 76 H32 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M34 76 H86 L82 66 H38 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M40 66 H80 L76 56 H44 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M46 56 H74 L70 46 H50 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M51 46 H69 L66 36 H54 Z" fill="none" stroke="currentColor" stroke-width="3" />
+
+  <!-- Horizontal tier lines -->
+  <line x1="31" y1="81" x2="89" y2="81" stroke="currentColor" stroke-width="2" />
+  <line x1="37" y1="71" x2="83" y2="71" stroke="currentColor" stroke-width="2" />
+  <line x1="43" y1="61" x2="77" y2="61" stroke="currentColor" stroke-width="2" />
+  <line x1="49" y1="51" x2="71" y2="51" stroke="currentColor" stroke-width="2" />
+
+  <!-- Central shrine openings -->
+  <path d="M53 86 V75 Q60 68 67 75 V86" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M55 66 V58 Q60 52 65 58 V66" fill="none" stroke="currentColor" stroke-width="2.6" />
+  <path d="M57 46 V40 Q60 36 63 40 V46" fill="none" stroke="currentColor" stroke-width="2.4" />
+
+  <!-- Side miniature pillars/details -->
+  <line x1="38" y1="84" x2="38" y2="78" stroke="currentColor" stroke-width="2" />
+  <line x1="44" y1="84" x2="44" y2="78" stroke="currentColor" stroke-width="2" />
+  <line x1="76" y1="84" x2="76" y2="78" stroke="currentColor" stroke-width="2" />
+  <line x1="82" y1="84" x2="82" y2="78" stroke="currentColor" stroke-width="2" />
+
+  <line x1="45" y1="64" x2="45" y2="58" stroke="currentColor" stroke-width="2" />
+  <line x1="75" y1="64" x2="75" y2="58" stroke="currentColor" stroke-width="2" />
+
+  <!-- Top kalasam row -->
+  <path d="M53 34 H67" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+  <path d="M54 31 Q56 24 60 31 Q64 24 66 31" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <circle cx="50" cy="34" r="3" fill="currentColor" />
+  <circle cx="70" cy="34" r="3" fill="currentColor" />
+  <circle cx="60" cy="25" r="3" fill="currentColor" />
+
+  <!-- Guidelines list symbol -->
+  <circle cx="92" cy="113" r="12" fill="currentColor" opacity="0.13" />
+  <line x1="86" y1="108" x2="98" y2="108" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="86" y1="113" x2="98" y2="113" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="86" y1="118" x2="95" y2="118" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+</svg>
+
+        <h3 class="cin-font"
+          style="color:#3D0E00;font-weight:600;font-size:clamp(14px,3vw,18px);margin-bottom:8px">
+          <span class="len">Details</span>
+          <span class="lte te-font telugu-heading">వివరములు</span>
+        </h3>
+
+        <!-- <p class="cor-font"
+          style="color:#5C3000;font-size:clamp(13px,2.2vw,16px);margin-bottom:14px;line-height:1.6">
+          <span class="len">View the sacred rules to be followed by devotees</span>
+          <span class="lte te-font">భక్తులు పాటించవలసిన పవిత్ర నియమాలు</span>
+        </p> -->
+
+        <span class="cin-font"
+          style="color:#4A1205;font-size:clamp(11px,2vw,13px);display:inline-flex;align-items:center;gap:6px">
+          <span class="len">→</span>
+          <span class="lte te-font">→</span>
+        </span>
+
+        <div class="gline" style="width:64px;margin:16px auto 0;border-radius:2px"></div>
+      </div>
+    </a>
+
+    <!-- GUIDELINES TILE -->
+    <a href="rules.html" style="display:block">
+      <div class="rc quick-tile-card" style="padding:clamp(12px,3vw,18px);text-align:center;height:100%">
+
+        <div class="gline" style="width:64px;margin:0 auto 16px;border-radius:2px"></div>
+
+<!-- Hindu Temple Gopuram [temple tower] icon -->
+<svg class="quick-tile-icon" viewBox="0 0 120 150"
+  style="width:clamp(48px,10vw,68px);height:auto;display:block;margin:0 auto 12px;color:#4A1205">
+  
+  <!-- Base platform -->
+  <path d="M14 138 H106" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+  <path d="M20 130 H100" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none" />
+
+  <!-- Bottom mandapam -->
+  <rect x="24" y="96" width="72" height="34" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M30 130 V106 Q36 98 42 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+  <path d="M48 130 V106 Q54 98 60 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+  <path d="M66 130 V106 Q72 98 78 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+  <path d="M84 130 V106 Q90 98 96 106 V130" fill="none" stroke="currentColor" stroke-width="2.8" />
+
+  <!-- Decorative row above base -->
+  <path d="M20 92 H100" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+  <path d="M25 92 Q30 82 35 92 Q40 82 45 92 Q50 82 55 92 Q60 82 65 92 Q70 82 75 92 Q80 82 85 92 Q90 82 95 92"
+    fill="none" stroke="currentColor" stroke-width="2.4" />
+
+  <!-- Gopuram tiers -->
+  <path d="M28 86 H92 L88 76 H32 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M34 76 H86 L82 66 H38 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M40 66 H80 L76 56 H44 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M46 56 H74 L70 46 H50 Z" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M51 46 H69 L66 36 H54 Z" fill="none" stroke="currentColor" stroke-width="3" />
+
+  <!-- Horizontal tier lines -->
+  <line x1="31" y1="81" x2="89" y2="81" stroke="currentColor" stroke-width="2" />
+  <line x1="37" y1="71" x2="83" y2="71" stroke="currentColor" stroke-width="2" />
+  <line x1="43" y1="61" x2="77" y2="61" stroke="currentColor" stroke-width="2" />
+  <line x1="49" y1="51" x2="71" y2="51" stroke="currentColor" stroke-width="2" />
+
+  <!-- Central shrine openings -->
+  <path d="M53 86 V75 Q60 68 67 75 V86" fill="none" stroke="currentColor" stroke-width="3" />
+  <path d="M55 66 V58 Q60 52 65 58 V66" fill="none" stroke="currentColor" stroke-width="2.6" />
+  <path d="M57 46 V40 Q60 36 63 40 V46" fill="none" stroke="currentColor" stroke-width="2.4" />
+
+  <!-- Side miniature pillars/details -->
+  <line x1="38" y1="84" x2="38" y2="78" stroke="currentColor" stroke-width="2" />
+  <line x1="44" y1="84" x2="44" y2="78" stroke="currentColor" stroke-width="2" />
+  <line x1="76" y1="84" x2="76" y2="78" stroke="currentColor" stroke-width="2" />
+  <line x1="82" y1="84" x2="82" y2="78" stroke="currentColor" stroke-width="2" />
+
+  <line x1="45" y1="64" x2="45" y2="58" stroke="currentColor" stroke-width="2" />
+  <line x1="75" y1="64" x2="75" y2="58" stroke="currentColor" stroke-width="2" />
+
+  <!-- Top kalasam row -->
+  <path d="M53 34 H67" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+  <path d="M54 31 Q56 24 60 31 Q64 24 66 31" fill="none" stroke="currentColor" stroke-width="2.5" />
+  <circle cx="50" cy="34" r="3" fill="currentColor" />
+  <circle cx="70" cy="34" r="3" fill="currentColor" />
+  <circle cx="60" cy="25" r="3" fill="currentColor" />
+
+  <!-- Guidelines list symbol -->
+  <circle cx="92" cy="113" r="12" fill="currentColor" opacity="0.13" />
+  <line x1="86" y1="108" x2="98" y2="108" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="86" y1="113" x2="98" y2="113" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="86" y1="118" x2="95" y2="118" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+</svg>
+
+        <h3 class="cin-font"
+          style="color:#3D0E00;font-weight:600;font-size:clamp(14px,3vw,18px);margin-bottom:8px">
+          <span class="len">Guidelines</span>
+          <span class="lte te-font telugu-heading">నియమములు</span>
+        </h3>
+
+        <!-- <p class="cor-font"
+          style="color:#5C3000;font-size:clamp(13px,2.2vw,16px);margin-bottom:14px;line-height:1.6">
+          <span class="len">View helpful guidelines for devotees attending the festival</span>
+          <span class="lte te-font">ఉత్సవంలో పాల్గొనే భక్తులకు ఉపయోగకరమైన మార్గదర్శకాలు</span>
+        </p> -->
+
+        <span class="cin-font"
+          style="color:#4A1205;font-size:clamp(11px,2vw,13px);display:inline-flex;align-items:center;gap:6px">
+          <span class="len">→</span>
+          <span class="lte te-font">→</span>
+        </span>
+
+        <div class="gline" style="width:64px;margin:16px auto 0;border-radius:2px"></div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
 
 
       <!-- ── 27 NAKSHATRA GRID ── -->
@@ -1877,12 +2228,12 @@ text-shadow:
       { id: 14, en: "Chithha", te: "చిత్త" },
       { id: 15, en: "Swati", te: "స్వాతి" },
       { id: 16, en: "Vishakha", te: "విశాఖ" },
-      { id: 17, en: "Anuradha", te: "అనురాధ" },
+      { id: 17, en: "Anuradha", te: "అనూరాధ" },
       { id: 18, en: "Jyeshtha", te: "జ్యేష్ఠ" },
       { id: 19, en: "Moola", te: "మూల" },
       { id: 20, en: "Purva Ashadha", te: "పూర్వాషాఢ" },
       { id: 21, en: "Uttara Ashadha", te: "ఉత్తరాషాఢ" },
-      { id: 22, en: "Shravana", te: "శ్రవణ" },
+      { id: 22, en: "Shravanam", te: "శ్రవణం" },
       { id: 23, en: "Dhanishta", te: "ధనిష్ట" },
       { id: 24, en: "Shatabhisha", te: "శతభిష" },
       { id: 25, en: "Purva Bhadra", te: "పూర్వాభాద్ర" },
