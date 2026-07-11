@@ -2319,6 +2319,34 @@ body[data-lang="te"] #pradakshinaWidget .pw-prad-title-te {
   display: block;
   flex-shrink: 0;
 }
+
+    /* Remove Android Chrome blue tap highlight */
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button,
+.nc,
+.quick-tile-card,
+.lang-btn,
+.dev-marquee,
+#grid .nc,
+#grid .nc *,
+button *,
+a * {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+a:focus,
+a:active,
+button:focus,
+button:active,
+.nc:focus,
+.nc:active {
+    outline: none;
+}
   </style>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0dcffe6a87cd4112a67452301a457d98"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
